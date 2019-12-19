@@ -1,0 +1,195 @@
+{
+    "id": "0416247892fb4e7cfa45932c208a177d",
+    "name": "Airports API v2",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "5e57a049bd4b3ea8607aa50ae91a0219",
+            "name": "Get Airports",
+            "url": "httpsapi.transavia.com\/v2\/airports\/",
+            "description": "Retrieve all airports.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0416247892fb4e7cfa45932c208a177d",
+            "rawModeData": ""
+        },
+        {
+            "id": "a17451726762d0c1fb720d36d82c7a1f",
+            "name": "Get Country Codes",
+            "url": "httpsapi.transavia.com\/v2\/airports\/countrycode\/{countryCode}",
+            "description": "Retrieve airports by country code.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "countryCode",
+                    "description": "Comma-separated list of country codes (2-character ISO 3166-1). More than 3 country codes is not allowed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0416247892fb4e7cfa45932c208a177d",
+            "rawModeData": ""
+        },
+        {
+            "id": "6942492b76322151520d2e30369cc786",
+            "name": "Get Nearest Airports",
+            "url": "httpsapi.transavia.com\/v2\/airports\/nearest",
+            "description": "Retrieve nearest airports by geo coordinates (latitude\/longitude).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "latitude",
+                    "description": "Latitude in decimals, lower than -90.0 and higher than 90.0 is not allowed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "longitude",
+                    "description": "Longitude in decimals, lower than -180.0 and higher than 180.0 is not allowed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "maxDistanceInKm",
+                    "description": "Maximum distance in kilometers, lower than 1 and higher than 500 is not allowed. If not set, max value is applied.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Limits the result, lower than 0 is not allowed. If not set, the result is not limited.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0416247892fb4e7cfa45932c208a177d",
+            "rawModeData": ""
+        },
+        {
+            "id": "d5ff7008d150f4048873ccbd963f8138",
+            "name": "Get Nearest Airport",
+            "url": "httpsapi.transavia.com\/v2\/airports\/nearest\/{id}",
+            "description": "Retrieve nearest airports by station id.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Airport (IATA code) to search nearest airports for.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "maxDistanceInKm",
+                    "description": "Maximum distance in kilometers, lower than 1 and higher than 500 is not allowed. If not set, max value is applied.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Limits the result, lower than 0 is not allowed. If not set, the result is not limited.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0416247892fb4e7cfa45932c208a177d",
+            "rawModeData": ""
+        },
+        {
+            "id": "a782668ae2534de91a7b011a7534e06c",
+            "name": "Get Aiport",
+            "url": "httpsapi.transavia.com\/v2\/airports\/{id}",
+            "description": "Retrieve airport by id.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Airport (IATA code) to search nearest airports for.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0416247892fb4e7cfa45932c208a177d",
+            "rawModeData": ""
+        }
+    ]
+}
