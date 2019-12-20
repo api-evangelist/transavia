@@ -1,0 +1,340 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Flight Offers API v1",
+        "description": "Returns flight offers",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpstst.api.transavia.com\/v1\/flightoffers"
+    ],
+    "paths": {
+        "\/": {
+            "get": {
+                "summary": "Flight offers",
+                "description": "Retrieve flight offers by query string parameters.",
+                "operationId": "58e50bf6ab95b50b8410ea72",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Origin",
+                        "in": "query",
+                        "description": "Routekey (single or multiple) of the origin based on airport IATA-code, comma separated"
+                    },
+                    {
+                        "name": "Destination",
+                        "in": "query",
+                        "description": "Routekey (single or multiple) of the destination based on airport IATA-code, comma separated"
+                    },
+                    {
+                        "name": "OriginDepartureDate",
+                        "in": "query",
+                        "description": "Date \/ Range to depart from origin airport. Must be in format yyyyMMdd or yyyyMM."
+                    },
+                    {
+                        "name": "OriginArrivalDate",
+                        "in": "query",
+                        "description": "Date \/ Range to arrive at origin airport. Must be in format yyyyMMdd or yyyyMM."
+                    },
+                    {
+                        "name": "DestinationDepartureDate",
+                        "in": "query",
+                        "description": "Date \/ Range to depart from destination airport. Must be in format yyyyMMdd or yyyyMM."
+                    },
+                    {
+                        "name": "DestinationArrivalDate",
+                        "in": "query",
+                        "description": "Date \/ Range to arrive at destination airport. Must be in format yyyyMMdd or yyyyMM."
+                    },
+                    {
+                        "name": "OriginDepartureTime",
+                        "in": "query",
+                        "description": "Time range in which to depart from origin airport. Must be in format (0000-2359)."
+                    },
+                    {
+                        "name": "OriginArrivalTime",
+                        "in": "query",
+                        "description": "Time range in which to arrive at origin airport. Must be in format (0000-2359)."
+                    },
+                    {
+                        "name": "DestinationDepartureTime",
+                        "in": "query",
+                        "description": "Time range in which to depart from destination airport. Must be in format (0000-2359)."
+                    },
+                    {
+                        "name": "DestinationArrivalTime",
+                        "in": "query",
+                        "description": "Time range in which to arrive on destination airport. Must be in format (0000-2359)."
+                    },
+                    {
+                        "name": "OriginDepartureDayOfWeek",
+                        "in": "query",
+                        "description": "Preferred departureday(s) of week to depart from origin airport, comma separated (mo,th,we)."
+                    },
+                    {
+                        "name": "OriginArrivalDayOfWeek",
+                        "in": "query",
+                        "description": "Preferred departureday(s) of week to arrive on origin airport, comma separated (mo,th,we)."
+                    },
+                    {
+                        "name": "DestinationDepartureDayOfWeek",
+                        "in": "query",
+                        "description": "Preferred departureday(s) of week to depart from destination airport, comma separated (mo,th,we)."
+                    },
+                    {
+                        "name": "DestinationArrivalDayOfWeek",
+                        "in": "query",
+                        "description": "Preferred departureday(s) of week to arrive on destination airport, comma separated (mo,th,we)."
+                    },
+                    {
+                        "name": "DaysAtDestination",
+                        "in": "query",
+                        "description": "Duration in days of the time spent on the destination. Return on the same day means 1 day at destination."
+                    },
+                    {
+                        "name": "DirectFlight",
+                        "in": "query",
+                        "description": "When set to true, will only return direct flights."
+                    },
+                    {
+                        "name": "Adults",
+                        "in": "query",
+                        "description": "Number of adult passengers (default = 1)"
+                    },
+                    {
+                        "name": "Children",
+                        "in": "query",
+                        "description": "Number of children passengers (default = 0)"
+                    },
+                    {
+                        "name": "Price",
+                        "in": "query",
+                        "description": "Price range in euro's or loyalty points for the flight offer."
+                    },
+                    {
+                        "name": "GroupPricing",
+                        "in": "query",
+                        "description": "Show price-per-adult by default, or price for all passengers when set to true."
+                    },
+                    {
+                        "name": "ProductClass",
+                        "in": "query",
+                        "description": "Product Class or branded fare (basic, plus, max) (default = basic)"
+                    },
+                    {
+                        "name": "Offset",
+                        "in": "query",
+                        "description": "Paging number of the limited result set (default = 0)"
+                    },
+                    {
+                        "name": "Include",
+                        "in": "query",
+                        "description": "Comma-separated list of 'advanced\/optional' fields to be included in the response. Allowed values: ClassOfService"
+                    },
+                    {
+                        "name": "OrderBy",
+                        "in": "query",
+                        "description": "Comma-separated list of fields on which the result must be ordered. Allowed values: 'Origin', 'Destination', 'OriginDepartureDate', 'DestinationArrivalDate', 'Price'. For return flights also the values 'DestinationDepartureDate' and 'OriginArrivalDate' can be used. (default = OriginDepartureDate, Origin, Destination)"
+                    },
+                    {
+                        "name": "LowestPricePerDestination",
+                        "in": "query",
+                        "description": "Return only the lowest price per destination when set to true (default = false)"
+                    },
+                    {
+                        "name": "Loyalty",
+                        "in": "query",
+                        "description": "When set to \"FlyingBlue\", filtering is based on Flying Blue points and results are returned in Flying Blue points."
+                    },
+                    {
+                        "name": "Limit",
+                        "in": "query",
+                        "description": "Maximum number of items in the response (default = 100, max = 1000 for one-way \/ 200 for round-trip). Can also be used in combination with OrderByEnum to return first or last item (default = 1000, max = 1000) If the response is limitted a ResultSet element is added to the response root element containing a link to request the next offset."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "FlightOffersResponse": {
+                "type": "object",
+                "properties": {
+                    "flightOffer": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ResultSet": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "FlightOffer": {
+                "type": "object"
+            },
+            "Link": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "FlightSegment": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "departureDateTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "arrivalDateTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "flightNumber": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AirItineraryPricingInfo": {
+                "type": "object",
+                "properties": {
+                    "totalPriceAllPassengers": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalPriceOnePassenger": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalPointsAllPassengers": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalPointsOnePassenger": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "baseFare": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "taxSurcharge": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "currencyCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "productClass": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "classOfService": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastModifiedUtc": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MarketingAirline": {
+                "type": "object",
+                "properties": {
+                    "companyShortName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Airport": {
+                "type": "object",
+                "properties": {
+                    "locationCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "city": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "distanceInKm": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Country": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GeoCoordinates": {
+                "type": "object",
+                "properties": {
+                    "latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "longitude": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ErrorInfo": {
+                "type": "object",
+                "properties": {
+                    "errorMessage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "referenceId": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
