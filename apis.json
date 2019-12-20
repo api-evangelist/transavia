@@ -1,0 +1,94 @@
+{
+    "name": "Transavia",
+    "description": "Want to fly affordably to more than 100 destinations in Europe? Book a flight with Transavia!",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28522-airports-api-v2.jpg",
+    "tags": [
+        "airlines",
+        "general data",
+        "have api",
+        "service api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/transavia\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Airports API v2",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28522-airports-api-v2.jpg",
+            "humanURL": "http:\/\/transavia.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/airports-api-v2.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/airports-api-v2-postman-collection.json"
+                }
+            ]
+        },
+        {
+            "name": "Routes API v3",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28522-airports-api-v2.jpg",
+            "humanURL": "http:\/\/transavia.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/routes-api-v3.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/routes-api-v3-postman-collection.json"
+                }
+            ]
+        },
+        {
+            "name": "Flight Offers API v1",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28522-airports-api-v2.jpg",
+            "humanURL": "http:\/\/transavia.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/flight-offers-api-v1.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/flight-offers-api-v1-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/transavia-airlines"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/developer.transavia.com\/"
+        },
+        {
+            "type": "Documentation",
+            "url": "https:\/\/tst.developer.transavia.com\/docs\/services\/"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/transavia"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/transavia.com"
+        }
+    ]
+}
