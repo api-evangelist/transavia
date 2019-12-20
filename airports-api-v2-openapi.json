@@ -1,0 +1,224 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0",
+        "title": "Airports API v2",
+        "description": "Returns all airports",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.transavia.com\/v2\/airports"
+    ],
+    "paths": {
+        "\/": {
+            "get": {
+                "summary": "Get Airports",
+                "description": "Retrieve all airports.",
+                "operationId": "Get",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/countrycode\/{countryCode}": {
+            "get": {
+                "summary": "Get Country Codes",
+                "description": "Retrieve airports by country code.",
+                "operationId": "CountrycodeCountryCodeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "countryCode",
+                        "in": "path",
+                        "description": "Comma-separated list of country codes (2-character ISO 3166-1). More than 3 country codes is not allowed."
+                    }
+                ]
+            }
+        },
+        "\/nearest": {
+            "get": {
+                "summary": "Get Nearest Airports",
+                "description": "Retrieve nearest airports by geo coordinates (latitude\/longitude).",
+                "operationId": "NearestGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "latitude",
+                        "in": "query",
+                        "description": "Latitude in decimals, lower than -90.0 and higher than 90.0 is not allowed."
+                    },
+                    {
+                        "name": "longitude",
+                        "in": "query",
+                        "description": "Longitude in decimals, lower than -180.0 and higher than 180.0 is not allowed."
+                    },
+                    {
+                        "name": "maxDistanceInKm",
+                        "in": "query",
+                        "description": "Maximum distance in kilometers, lower than 1 and higher than 500 is not allowed. If not set, max value is applied."
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Limits the result, lower than 0 is not allowed. If not set, the result is not limited."
+                    }
+                ]
+            }
+        },
+        "\/nearest\/{id}": {
+            "get": {
+                "summary": "Get Nearest Airport",
+                "description": "Retrieve nearest airports by station id.",
+                "operationId": "NearestIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Airport (IATA code) to search nearest airports for."
+                    },
+                    {
+                        "name": "maxDistanceInKm",
+                        "in": "query",
+                        "description": "Maximum distance in kilometers, lower than 1 and higher than 500 is not allowed. If not set, max value is applied."
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Limits the result, lower than 0 is not allowed. If not set, the result is not limited."
+                    }
+                ]
+            }
+        },
+        "\/{id}": {
+            "get": {
+                "summary": "Get Aiport",
+                "description": "Retrieve airport by id.",
+                "operationId": "IdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Airport (IATA code) to search nearest airports for."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AirportDetailsDto": {
+                "type": "object",
+                "properties": {
+                    "city": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AirportDto": {
+                "type": "object",
+                "properties": {
+                    "city": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BadRequestResponse": {
+                "type": "object",
+                "properties": {
+                    "errorMessages": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Country": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GeoCoordinates": {
+                "type": "object",
+                "properties": {
+                    "latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "longitude": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "InternalServerErrorResponse": {
+                "type": "object",
+                "properties": {
+                    "errorMessage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "referenceId": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Link": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "NearestAirportDto": {
+                "type": "object",
+                "properties": {
+                    "city": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "distanceInKm": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
