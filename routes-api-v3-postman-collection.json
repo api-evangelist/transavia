@@ -1,0 +1,82 @@
+{
+    "id": "7f665a0463149cfa187c14aa9606f44e",
+    "name": "Routes API v3",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "2db243560fce3d9dc56c961fccabe55c",
+            "name": "Get all routes by origin and\/or destination",
+            "url": "httpstst.api.transavia.com\/v3\/routes\/",
+            "description": "Retrieves all routes.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Origin",
+                    "description": "IATA-code (3 characters) of the origin airport. Example: AMS",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Destination",
+                    "description": "IATA-code (3 characters) of the destination airport. Example: BCN",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f665a0463149cfa187c14aa9606f44e",
+            "rawModeData": ""
+        },
+        {
+            "id": "b07154884822a59be3dc7e2ebd45e5ea",
+            "name": "Get route by id",
+            "url": "httpstst.api.transavia.com\/v3\/routes\/{id}",
+            "description": "Gets the route. Note, this request doesn't have a data property in the response.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Route identifier, {origin airport IATA-code}-{destination airport IATA-code}. Example: AMS-BCN.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7f665a0463149cfa187c14aa9606f44e",
+            "rawModeData": ""
+        }
+    ]
+}
