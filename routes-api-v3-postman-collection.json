@@ -1,5 +1,5 @@
 {
-    "id": "7f665a0463149cfa187c14aa9606f44e",
+    "id": "bbf27ccbb00d564b968a9a3fb1fa2904",
     "name": "Routes API v3",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "2db243560fce3d9dc56c961fccabe55c",
+            "id": "c3c1a7a7d89cb52b0808682ab48e1b7b",
             "name": "Get all routes by origin and\/or destination",
             "url": "httpstst.api.transavia.com\/v3\/routes\/",
             "description": "Retrieves all routes.",
@@ -44,11 +44,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f665a0463149cfa187c14aa9606f44e",
+            "collectionId": "bbf27ccbb00d564b968a9a3fb1fa2904",
             "rawModeData": ""
         },
         {
-            "id": "b07154884822a59be3dc7e2ebd45e5ea",
+            "id": "3b53f79546b6106454183d0ada41248b",
             "name": "Get route by id",
             "url": "httpstst.api.transavia.com\/v3\/routes\/{id}",
             "description": "Gets the route. Note, this request doesn't have a data property in the response.",
@@ -75,7 +75,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7f665a0463149cfa187c14aa9606f44e",
+            "collectionId": "bbf27ccbb00d564b968a9a3fb1fa2904",
             "rawModeData": ""
         }
     ]
