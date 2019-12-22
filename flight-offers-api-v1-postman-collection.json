@@ -1,5 +1,5 @@
 {
-    "id": "b296ef1060873ea3f4daaf2c75ee6bc9",
+    "id": "532a87627889c351d8033df8aab04f4d",
     "name": "Flight Offers API v1",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "b2e42d1b33db1201693cfecf35b9efb6",
+            "id": "459214146fa4715ee176dc1fcaef2246",
             "name": "Flight offers",
             "url": "httpstst.api.transavia.com\/v1\/flightoffers\/",
             "description": "Retrieve flight offers by query string parameters.",
@@ -219,7 +219,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b296ef1060873ea3f4daaf2c75ee6bc9",
+            "collectionId": "532a87627889c351d8033df8aab04f4d",
             "rawModeData": ""
         }
     ]
