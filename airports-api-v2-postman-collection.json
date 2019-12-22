@@ -1,5 +1,5 @@
 {
-    "id": "0416247892fb4e7cfa45932c208a177d",
+    "id": "ac2c2e4a1f07099021abeb73c807bdd6",
     "name": "Airports API v2",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "5e57a049bd4b3ea8607aa50ae91a0219",
+            "id": "b8a39079c1a46d042f3d9632d4d7ba91",
             "name": "Get Airports",
             "url": "httpsapi.transavia.com\/v2\/airports\/",
             "description": "Retrieve all airports.",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0416247892fb4e7cfa45932c208a177d",
+            "collectionId": "ac2c2e4a1f07099021abeb73c807bdd6",
             "rawModeData": ""
         },
         {
-            "id": "a17451726762d0c1fb720d36d82c7a1f",
+            "id": "af10aab58b9028b916987ba3fe4a5d49",
             "name": "Get Country Codes",
             "url": "httpsapi.transavia.com\/v2\/airports\/countrycode\/{countryCode}",
             "description": "Retrieve airports by country code.",
@@ -60,11 +60,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0416247892fb4e7cfa45932c208a177d",
+            "collectionId": "ac2c2e4a1f07099021abeb73c807bdd6",
             "rawModeData": ""
         },
         {
-            "id": "6942492b76322151520d2e30369cc786",
+            "id": "29acb25862527ec3fd3334266db5318d",
             "name": "Get Nearest Airports",
             "url": "httpsapi.transavia.com\/v2\/airports\/nearest",
             "description": "Retrieve nearest airports by geo coordinates (latitude\/longitude).",
@@ -112,11 +112,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0416247892fb4e7cfa45932c208a177d",
+            "collectionId": "ac2c2e4a1f07099021abeb73c807bdd6",
             "rawModeData": ""
         },
         {
-            "id": "d5ff7008d150f4048873ccbd963f8138",
+            "id": "fad819cbd71f5431331e14f0fabb5232",
             "name": "Get Nearest Airport",
             "url": "httpsapi.transavia.com\/v2\/airports\/nearest\/{id}",
             "description": "Retrieve nearest airports by station id.",
@@ -157,11 +157,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0416247892fb4e7cfa45932c208a177d",
+            "collectionId": "ac2c2e4a1f07099021abeb73c807bdd6",
             "rawModeData": ""
         },
         {
-            "id": "a782668ae2534de91a7b011a7534e06c",
+            "id": "9ffce8054ed8d0cd7b16364ca69b9267",
             "name": "Get Aiport",
             "url": "httpsapi.transavia.com\/v2\/airports\/{id}",
             "description": "Retrieve airport by id.",
@@ -188,7 +188,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0416247892fb4e7cfa45932c208a177d",
+            "collectionId": "ac2c2e4a1f07099021abeb73c807bdd6",
             "rawModeData": ""
         }
     ]
